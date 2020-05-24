@@ -26,17 +26,17 @@ def poll(pSize, sSize, p):
     print("Variance:\t\t   %0.6f" %(variance))
     print("95%% confidence interval:  [", end='')
     print("%0.2f%%" %(get_min(p * 100 - p1)), end='')
-    print(" ; ", end='')
+    print("; ", end='')
     print("%0.2f%%" %(get_max(p * 100 + p1)), end='')
     print("]")
     print("99%% confidence interval:  [", end='')
     print("%0.2f%%" %(get_min(p * 100 - p2)), end='')
-    print(" ; ", end='')
+    print("; ", end='')
     print("%0.2f%%" %(get_max(p * 100 + p2)), end='')
     print("]")
 
 if (len(sys.argv) != 4):
-    if (len(sys.argv) == 2 & sys.argv[1] == "-h"):
+    if (len(sys.argv) == 2 and sys.argv[1] == "-h"):
         print("USAGE\n\t./209poll pSize sSize p\n\nDESCRIPTION\n\tpSize\tsize of the population\n\tsSize\tsize of the sample (supposed to be representative)\n\tp\tpercentage of voting intentions for a specific candidate")
     else:
         print ("Error: not the right number of argument")
